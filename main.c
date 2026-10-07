@@ -51,14 +51,11 @@ int main() {
     } 
     // Série de Fibonacci -> Cada termo é a soma dos dois anteriores
     else if (opcao == 3) { 
-        int a = 1, b = 1;
-        for (int i = 0; i < tamanho; i++) {
-            if (i == 0 || i == 1) {
-                seq[i] = 1;
-            } else {
-                seq[i] = a + b;
-                a = b;
-                b = seq[i];
+        for (int i = 0; i < tamanho; i++) {    
+            if (i == 0 || i == 1) {             
+                seq[i] = 1;                     
+            } else {                            
+                seq[i] = seq[i - 1] + seq[i - 2];
             }
         }
     }
